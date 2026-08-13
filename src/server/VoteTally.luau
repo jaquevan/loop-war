@@ -143,11 +143,7 @@ function VoteTally.tally(
                 continue
             end
 
-            local clamped = math.clamp(
-                math.round(rating),
-                Constants.VOTE_MIN,
-                Constants.VOTE_MAX
-            )
+            local clamped = math.clamp(math.round(rating), Constants.VOTE_MIN, Constants.VOTE_MAX)
 
             received[targetUserId] = received[targetUserId] or {}
             table.insert(received[targetUserId], clamped)

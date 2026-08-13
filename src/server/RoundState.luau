@@ -135,11 +135,8 @@ function RoundState:SubmitBallot(voterUserId: number, ratings: { [number]: numbe
     local cleaned: { [number]: number } = {}
     for targetUserId, rating in ratings do
         if targetUserId ~= voterUserId and self.patterns[targetUserId] then
-            cleaned[targetUserId] = math.clamp(
-                math.round(rating),
-                Constants.VOTE_MIN,
-                Constants.VOTE_MAX
-            )
+            cleaned[targetUserId] =
+                math.clamp(math.round(rating), Constants.VOTE_MIN, Constants.VOTE_MAX)
         end
     end
 
@@ -166,10 +163,8 @@ function RoundState:Resolve(histories: { [number]: VoteTally.VoterHistory })
     local scores, dropped = VoteTally.tally(ballots, histories)
 
     for _, ballot in ballots do
-        histories[ballot.voterUserId] = VoteTally.updateHistory(
-            histories[ballot.voterUserId],
-            ballot
-        )
+        histories[ballot.voterUserId] =
+            VoteTally.updateHistory(histories[ballot.voterUserId], ballot)
     end
 
     self:_setPhase("result")

@@ -113,11 +113,8 @@ function AudioGraph:PlayNote(trackIndex: number, semitones: number?, atTime: num
     end
 
     local function fire()
-        local shift = math.clamp(
-            semitones or 0,
-            -Constants.MAX_SEMITONE_SHIFT,
-            Constants.MAX_SEMITONE_SHIFT
-        )
+        local shift =
+            math.clamp(semitones or 0, -Constants.MAX_SEMITONE_SHIFT, Constants.MAX_SEMITONE_SHIFT)
         track.pitch.Pitch = 2 ^ (shift / 12)
 
         local player = track.players[track.nextVoice]

@@ -96,10 +96,30 @@ Constants.DEFAULT_SAVE_SLOTS = 25
 -- Standard producer typing layout. Anyone from FL Studio or Ableton already
 -- has this in their fingers. Overridable per player; see PlayerData.keybinds.
 Constants.PIANO_KEYS = {
-    Z = 0, X = 2, C = 4, V = 5, B = 7, N = 9, M = 11, -- lower white
-    S = 1, D = 3, G = 6, H = 8, J = 10, -- lower black
-    Q = 12, W = 14, E = 16, R = 17, T = 19, Y = 21, U = 23, -- upper white
-    Two = 13, Three = 15, Five = 18, Six = 20, Seven = 22, -- upper black
+    Z = 0,
+    X = 2,
+    C = 4,
+    V = 5,
+    B = 7,
+    N = 9,
+    M = 11, -- lower white
+    S = 1,
+    D = 3,
+    G = 6,
+    H = 8,
+    J = 10, -- lower black
+    Q = 12,
+    W = 14,
+    E = 16,
+    R = 17,
+    T = 19,
+    Y = 21,
+    U = 23, -- upper white
+    Two = 13,
+    Three = 15,
+    Five = 18,
+    Six = 20,
+    Seven = 22, -- upper black
 }
 
 Constants.VOTE_MIN = 1
