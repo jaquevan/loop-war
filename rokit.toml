@@ -1,0 +1,8 @@
+# Toolchain pinned with Rokit (https://github.com/rojo-rbx/rokit)
+# Rokit replaced Aftman, which is no longer maintained.
+# Install tools with:  rokit install
+
+[tools]
+rojo = "rojo-rbx/rojo@7.5.1"
+stylua = "JohnnyMorganz/StyLua@2.0.2"
+selene = "Kampfkarren/selene@0.27.1"

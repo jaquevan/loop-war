@@ -1,0 +1,29 @@
+# Rojo / Roblox
+*.rbxl
+*.rbxlx
+*.rbxl.lock
+*.rbxlx.lock
+*.rbxm
+sourcemap.json
+
+# Toolchain
+.aftman/
+.rokit/
+.foreman/
+
+# Editor
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Audio working files (large; keep out of git)
+assets/raw/
+*.wav
+*.aiff
+*.flac
